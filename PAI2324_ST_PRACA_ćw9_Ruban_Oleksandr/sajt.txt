@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazwa Twojej restauracji</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div class="w3-container w3-black">
+    <h1>Nazwa Twojej restauracji</h1>
+</div>
+
+<div class="w3-bar w3-light-grey">
+    <a href="#" class="w3-bar-item w3-button">Strona główna</a>
+    <a href="#" class="w3-bar-item w3-button">Menu</a>
+    <a href="#" class="w3-bar-item w3-button">O nas</a>
+    <a href="#" class="w3-bar-item w3-button">Kontakt</a>
+</div>
+
+<div class="w3-container">
+    <h2>Witamy w naszej restauracji!</h2>
+    <p>Opis Twojej restauracji i jej unikalnych cech.</p>
+
+    <h3>Nasze menu</h3>
+    <p>Tutaj możesz umieścić listę dań z opisem i cenami.</p>
+
+    <h3>O nas</h3>
+    <p>Dodatkowe informacje o Twojej restauracji, historia, zespół, itp.</p>
+
+    <h3>Kontakt</h3>
+    <p>Adres, numer telefonu, adres e-mail i inne dane kontaktowe.</p>
+</div>
+
+<div class="w3-container w3-black">
+    <p>&copy; 2024 Nazwa Twojej restauracji. Wszelkie prawa zastrzeżone.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title> W3.CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body, h1, h5 {font-family: "Raleway", sans-serif}
+        body, html {height: 100%}
+        .bgimg {
+          background-image: url('foto.jpg');
+          min-height: 100%;
+          background-position: center;
+          background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p>Puzata Hata</p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">kontakt</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">poniedziałek - piątek 10-23 | sobota 14-02</p>
+    <p class="w3-large">42 ulica Miejska, Wroclaw</p>
+    
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Przystawki</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Zupa Pomidorowa <b>$2.50</b></h5>
+      <h5>Sałatka z Kurczakiem <b>$3.50</b></h5>
+      <h5>Chleb i Masło <b>$1.00</b></h5>
+    </div>
+    <div class="w3-container w3-black">
+      <h1>Dania Główne</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Grillowany Ryba z Ziemniakami <b>$8.50</b></h5>
+      <h5>Włoska Pizza <b>$5.50</b></h5>
+      <h5>Makaron Wegetariański <b>$4.00</b></h5>
+      <h5>Kurczak z Ziemniakami <b>$6.50</b></h5>
+      <h5>Burger Deluxe <b>$5.00</b></h5>
+    </div>
+    <div class="w3-container w3-black">
+      <h1>Desery</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Sałatka Owocowa <b>$2.50</b></h5>
+      <h5>Lody <b>$2.00</b></h5>
+      <h5>Czekoladowe Ciasto <b>$4.00</b></h5>
+      <h5>Ser <b>$5.50</b></h5>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Kontakt</h1>
+    </div>
+    <div class="w3-container">
+      <p>Zarezerwuj stolik, zapytaj o specjał dnia lub po prostu wyślij nam wiadomość:</p>
+      <form id="contactForm" action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Imię" required name="Imię"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Liczba osób" required name="LiczbaOsób"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Data i godzina" required name="data" value="2020-11-16T20:00"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Wiadomość \ Specjalne życzenia" required name="Wiadomość"></p>
+        <p><button class="w3-button" type="submit">WYŚLIJ WIADOMOŚĆ</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const successIcon = document.createElement('i');
+        successIcon.classList.add('fas', 'fa-check-circle', 'w3-text-green', 'w3-xxlarge');
+        
+        const successMessage = document.createElement('p');
+        successMessage.textContent = 'Wiadomość została wysłana!';
+        successMessage.classList.add('w3-text-green');
+
+        contactForm.innerHTML = ''; 
+        contactForm.appendChild(successIcon);
+        contactForm.appendChild(successMessage);
+    });
+});
+</script>
+
+</body>
+</html>
